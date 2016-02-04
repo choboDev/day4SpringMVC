@@ -6,10 +6,14 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 import com.multicampus.biz.common.JDBCUtil;
 
 // DAO(Data Access Object)
+@Component
 public class BoardDAO{
+	
 	// JDBC 관련 변수 선언
 	private Connection conn;
 	private PreparedStatement stmt;

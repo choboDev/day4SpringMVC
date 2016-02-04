@@ -2,12 +2,19 @@ package com.multicampus.biz.board;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component("boardService")
 public class BoardServiceImpl implements BoardService {
+	@Autowired
 	private BoardDAO boardDAO;
 	
 	public BoardServiceImpl() {
 		System.out.println("===>BoardService °´Ã¼ »ý¼º");
 	}
+
+
 
 	public void insertBoard(BoardVO vo) {
 		boardDAO.insertBoard(vo);

@@ -6,9 +6,12 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 import com.multicampus.biz.common.JDBCUtil;
 
 //DAO(Data Access Object)
+@Component
 public class UserDAO {
 	// JDBC 관련 변수 선언
 	private Connection conn;
@@ -22,6 +25,9 @@ public class UserDAO {
 	
 	// CRUD 기능 메소드 구현
 	// 회원 가입
+	/* (non-Javadoc)
+	 * @see com.multicampus.biz.user.UserService#insertUser(com.multicampus.biz.user.UserVO)
+	 */
 	public void insertUser(UserVO vo) {
 		try {
 			conn = JDBCUtil.getConnection();
@@ -39,6 +45,9 @@ public class UserDAO {
 	}
 	
 	// 회원 상세 조회
+	/* (non-Javadoc)
+	 * @see com.multicampus.biz.user.UserService#getUser(com.multicampus.biz.user.UserVO)
+	 */
 	public UserVO getUser(UserVO vo) {
 		UserVO user = null;
 		try {
@@ -63,6 +72,9 @@ public class UserDAO {
 	}
 	
 	// 회원 목록 조회
+	/* (non-Javadoc)
+	 * @see com.multicampus.biz.user.UserService#getUserList()
+	 */
 	public List<UserVO> getUserList() {
 		List<UserVO> userList = new ArrayList<UserVO>();
 		try {
