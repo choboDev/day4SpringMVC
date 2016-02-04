@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 import com.multicampus.biz.common.JDBCUtil;
 
 //DAO(Data Access Object)
-@Component
+//@Component
 public class UserDAO {
 	// JDBC 관련 변수 선언
 	private Connection conn;
